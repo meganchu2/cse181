@@ -1,0 +1,13 @@
+98
+
+85
+
+page 151 last paragraph
+
+Since current technology can't generate extremely long reads, to compensate for that, we take our k-mer fragment edges and connect them to their k-1-mer prefix/suffix nodes in a debruijn graph.  I am thinking that at this point we already have enough information to find a eulerian path in our debruijn graph if there is one.  The only reason I can think of as to why we would add an extra step of "Transforming read-pairs into long virtual reads" is in the case that we have MULTIPLE eulerian paths in our graph.  I think it would be inefficient to do the extra read-pairs step if we have only one eulerian path in our graph.  Then again, I am not sure if there is any way to ascertain that there is indeed only ONE eulerian path in a graph.  I believe the read-pairs give some guideline as to which edge to traverse first if there are multiple edges coming out of one vertex, but I think it has to traverse up to the total number of edges in our graph each time it matches a Read1 and Read2, which I think is inefficient.  However, I also think that we can make up for this inefficiency if we string together all the edges between and including the edges matching Read1 and Read2, making a 2*k + d - mer edge, thus we don't have to traverse so many edges when constructing our final nucleotide sequence.
+
+page 152 last paragraph (I have 2 questions)
+
+Question 1: I think it would be inefficient to do the extra read-pairs step if we have only one eulerian path in our graph, so is there any way to ascertain we only have one eulerian path in the graph, and if so, is it still worth it to go through the read-pairs step if we only have one eulerian path in the graph?
+
+Question 2: I proposed stringing together edges in the graph (after confirming their order with read-pairs) to make the final dna assembly runtime faster.  Is this something I could actually implement, or is there a reason for keeping all edges the same length k?

@@ -1,0 +1,11 @@
+pre 60
+
+post 99
+
+page 22 Figure 1.10 and page 23 second paragraph
+
+Figure 1.10 was a little confusing since it included both the reverse and forward half-strands which I assumed were both part of one double stranded DNA between the ori and ter.  It was easy to see in this scenario that the longer time of the forward half-strand being single stranded during replication led to deamination and decreased C.  However, when calculating the skew diagram, it had to have been done by traversing the forward/reverse half- strands of ONE strand of the double stranded DNA (where the ori and ter are within not the ends of our traversed path).  Then if Figure 1.10 was also referring to one strand of the double stranded DNA, how would we then compare the number of bases relative to their base pairs?
+
+page 22 Figure 1.10
+
+Based on how the skew diagram is constructed, Figure 1.10 should be referring to a reverse half-strand and a forward half strand that are on the same one strand of the double stranded DNA, in this case, what is the significance of comparing their number of bases if those bases are not paired with the other strand?  Wouldn't the difference in each base between the reverse and forward half- strand increase everytime the DNA replicates?

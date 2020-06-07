@@ -1,0 +1,11 @@
+90
+
+70
+
+page 257 paragraph 1
+
+We were introduced to the local alignment path so that we could "ignore flanking areas of longer genes that exhibit little similarity".  From the descriptions on how to solve the local alignment problem, I believe that there is no explicit limitation of how many nucleotides the local alignment can span.  I am thinking that it can potentially span up to the entire global alignment length.  In this case, as the conserved interval of local alignment increases in length, the "free taxi rides" before and after the conserved interval become shorter, and the pentalties in global alignment that you avoided with the free taxi rides become trivial.  I think that there is such a wide range of possible lengths for the conserved interval that it becomes more based on luck whether you get a local alignment significantly shorter than the global alignment.
+
+page 257 paragraph 1
+
+Is there some part to the local alignment problem that guarantees we will get a conserved interval significantly shorter than the global alignment such that the overall algorithm becomes significantly more efficient if we use the local alignment?

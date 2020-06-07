@@ -1,0 +1,13 @@
+68
+
+100
+
+learning breakdown that I figured out myself
+page 74 figure 2.2
+
+At first I was confused because I thought the "Motifs" section of the figure represented the set of DNA strings that were given as input, which made me question the significance of calculating score(motifs) and profile(motifs).  I reread the sections before and after the figure a couple more times, and was able figure things out.  From my understanding, the motif matrix contains a set of k-mers (one from each dna string), and essentially our goal is to change the k-mers (based on what we have in each dna string) such that every row in the motif matrix is identical (ideally) or their difference is the smallest we can make it (realistically).  That is why we needed to calculate score(motifs) and profile(motifs) since they represent how similar the motifs are and the most probable nucleotide to appear at each position of a motif in a single dna string of the given set.
+
+forward thinking question
+
+Is there any way to avoid exhaustive search in motif finding while still maintaining the order motifs -> consensus(motifs)?
+
