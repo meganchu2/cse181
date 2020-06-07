@@ -1,0 +1,11 @@
+75
+
+60
+
+page 138 paragraph 1 (after 2nd stop and think)
+
+For burrows wheeler transform, I understand that we put the last letter of text to the front of text to form all cyclic rotations, then we order these rotations lexiographically.  Then we take the last letter of each rotation in lexiographical order, and this forms the burrows wheeler transform.  I am confused about how the burrows wheeler transform creates a run.  The example given is that "and" is a common word in Watson and Crick's double helix paper, such that when we order the cyclic rotations lexiographically we will have many rows of nd...a clumped together forming an run of many "A's".  I agree that this is true.  However, I also think there would also be clumps of d...an forming another run of "N's" with same number of N's as in the run of A's since we have the same number of "and" in the paper.  Yet in the panamabananas example, we ended up with a run of 5 A's for the repeat "ana" but we only have a run of 2 N's, and I am confused why the run of N's doeesn't have the same number as the run of A's.  I also think that similarly to the panamabananas example, that some letters will only have 1 letter runs, which would take more memory if we compressed them.
+
+page 138 paragraph 1 (after 2nd stop and think)
+
+Given a certain repeat, called Pattern, in a text, called Text.  If we do the burrows wheeler transform of Text,  should we have an equal numbers of letters in a run for each letter in Pattern?

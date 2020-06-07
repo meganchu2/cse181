@@ -1,0 +1,11 @@
+95
+
+80
+
+page 95 paragraph starting from middle of page
+
+In the biased coin-flip problem, we have our datasets with a HiddenVector that tells us which coin was used for which set of data.  We also have the parameter value for each coin that basically tells us how biased the respective coin is.  Since in the real problem we only know the datasets, we need to calculate both parameters and HiddenVector.  The way we are given to do this is to randomly generate the parameter values, and use those values to calculate the probability that a given dataset uses that coin (and we take the coin with parameter value that gives us the higher probability as the coin used for that dataset).  With this, we can generate all values in HiddenVector.  We can then use HiddenVector to find better parameter values using the provided dot product formula.  We continue this iteration and get better HiddenVector and parameter values until parameters ceases to change (then we have found parameters and HiddenVector).  I believe that in the first step when we generate HiddenVector from random parameter values, that even if we choose the coin with the higher probability, there may be cases where coin with parameter value that gives higher probability is not the correct choice.  If we create HiddenVector that contains a majority of these "incorrect choices", and calculate new parameter values based on this, wouldn't the new parameter values converge towards the opposite direction?  In other words, given two coins and a dataset, depending on what random parameter values we start with, if our HiddenVector converged to something like {1, 1, 0}, and our parameter values converged to (.1, .2),  it is ALSO possible that our HiddenVector could converge to {0, 0, 1} with parameter values of (.2, .1), had the random starting parameter values been different.
+
+page 95 paragraph starting from middle of page
+
+Depending on the random parameter values that start the iteration generating the converging HiddenVector and parameters, is it possible that there are multiple "correct" and equivalent HiddenVectors/parameters with the only difference being a change in order of parameter values, and a change in integers representing each coin in HiddenVectors?

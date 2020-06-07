@@ -1,0 +1,11 @@
+89
+
+60
+
+page 152 first and second figures
+
+I understood that one can find a matching pattern with just the first and last column of the BWT matrix.  If our text was "banana$" and the BWT matrix has first column of {$, a, a, a, b, n, n} and last column of {a, n, n, b, $, a, a}.  We have 7 rows and i = {0, 1, 2, 3, 4, 5, 6} that correspond to each row in that order.  then we have LastToFirst(i) which corresponds to the starting index of the suffix that begins the cyclic rotation of each row.  If we are matching a pattern like "ana" to "banana$" I get how (step 1) we look for a row beginning with "a", and from those rows keep the ones that end with "n".  Then (step 2) we look for the rows beginning with "n" corresponding to the "n's" at the end of the previous step.  However, I do not get why the LastToFirst(i) value of the rows from step 1 would match the i values of the rows in step 2.  In my mind the i values and LastToFirst(i) values were calculated independently.
+
+page 152 first and second figures
+
+Why do the i-values (index of lexiographically sorted cyclic rotations) match with the LastToFirst(i) values (index of a starting position of the suffix beginning each row).  When matching a pattern with BWT?

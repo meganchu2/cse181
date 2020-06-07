@@ -1,0 +1,11 @@
+70
+
+65
+
+page 275 paragraph 1
+
+I understood the thinking that in order to cut down on the amount of memory used, we double the runtime.  The basis for achieving O(n) space from O(n+m) space is such that we halve the matrix and find the "middle node" in the middle column, which is part of the final alignment path.  Then we halve the matrices to the top left and bottom right of the middle node and find the middle nodes of those, and so on until we have found every node in the alignment path.  I get how this "halving method" gives us double the original O(n+m) runtime, since we explore n+m edges for the first middle node, (n+m)/2 edges for the next 2 middle nodes, (n+m)/4 middle nodes for the next 4 middle nodes, etc...  However, I still can't follow how using this algorithm gives us O(n) space.  I vaguely have an idea that O(n) space comes from finding which of n nodes in a column is the middle node for that column, but I am not sure if this still holds for an alignment path with multiple nodes in different columns but in the same row?  I also get how using "middle edges" is a more efficient algorithm since with one edge we can "know" 2 nodes instead of just 1 node from the "middle node" algorithm.
+
+page 275 paragraph 1
+
+Is there some example that makes it easier to visualize the O(n) space that the "middle node" algorithm takes up?
